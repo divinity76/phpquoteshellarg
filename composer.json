@@ -1,0 +1,14 @@
+{
+    "name": "divinity76/phpquoteshellarg",
+    "description": "php quote shell arguments",
+    "keywords": ["quoteshellarg", "escapeshellarg"],
+    "homepage": "https://github.com/divinity76/phprouter",
+    "type": "library",
+    "license": "Unlicense",
+    "require": {
+        "php": ">=7.2"
+    },
+    "autoload": {
+        "psr-4": {"Divinity76\\": "src/Divinity76/"}
+    }
+}
