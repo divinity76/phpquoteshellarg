@@ -15,7 +15,7 @@ function quoteshellarg(string $arg): string
 {
     static $isUnix = null;
     if ($isUnix === null) {
-        $isUnix = in_array(PHP_OS_FAMILY, array('Linux', 'BSD', 'Darwin', 'Solaris'), true);
+        $isUnix = in_array(PHP_OS_FAMILY, array('Linux', 'BSD', 'Darwin', 'Solaris'), true) || PHP_OS === 'CYGWIN';
     }
     if ($isUnix) {
         // PHP's built-in escapeshellarg() for unix is kindof garbage: https://3v4l.org/Hkv7h
