@@ -1,7 +1,19 @@
 # phpquoteshellarg
 php quote shell arguments function
-... doing a better job than php's builtin escapeshellarg(): https://3v4l.org/Hkv7h
-
+because php's escapeshellarg() function is broken:
+```
+$str="æøå\x01";
+var_dump(["str"=>$str,"escapeshellarg"=>escapeshellarg($str), "quoteshellarg"=>quoteshellarg($str)]);
+=>
+array(3) {
+  ["str"]=>
+  string(7) "æøå"
+  ["escapeshellarg"]=>
+  string(3) "''"
+  ["quoteshellarg"]=>
+  string(9) "'æøå'"
+}
+```
 # installation
 the script is just a standalone .php file, you can just copypaste it. 
 
